@@ -1,0 +1,24 @@
+{
+  "name": "etch-solid-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "parcel serve index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "babel-preset-solid": "0.18.14",
+    "parcel": "^2.0.0-beta.1",
+    "solid-js": "0.18.14",
+    "solid-styled-jsx": "0.18.14",
+    "styled-jsx": "3.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.4"
+  },
+  "keywords": [],
+  "browserslist": {
+    "chrome": "latest"
+  }
+}
