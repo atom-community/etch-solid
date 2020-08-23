@@ -1,6 +1,6 @@
 {
   "name": "etch-solid",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "version": "0.1.0",
   "author": "Amin Yahyaabadi",
   "description": "fast DOM library - etch with solid backend",
