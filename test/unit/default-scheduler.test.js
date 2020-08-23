@@ -1,4 +1,4 @@
-const DefaultScheduler = require('../../lib/default-scheduler')
+const DefaultScheduler = require('../../dist/default-scheduler')
 
 describe('DefaultScheduler', () => {
   let scheduler

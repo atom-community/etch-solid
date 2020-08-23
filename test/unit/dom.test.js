@@ -1,6 +1,6 @@
 /** @jsx etch.dom */
 
-const etch = require('../../lib/index')
+const etch = require('../../dist/index')
 
 describe('etch.dom', () => {
   it('defaults properties to an empty object', () => {
