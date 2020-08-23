@@ -1,6 +1,6 @@
 /** @jsx etch.dom */
 
-const etch = require('../../lib/index')
+const etch = require('../../dist/index')
 
 describe('function refs', () => {
   it('work', async function () {
