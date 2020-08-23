@@ -4,7 +4,7 @@ const plugins = createPlugins(["ts", "js"])
 
 export default [
   {
-    input: "src/main.ts",
+    input: "src/index.ts",
     output: [
       {
         dir: "dist",
