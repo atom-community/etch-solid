@@ -7,8 +7,7 @@ class MyComponent {
   }
 
   render() {
-    //  transpile all getter to read from $state
-    return <div>{this.$state.props.greeting} World!</div>;
+    return <div>{this.props.greeting} World!</div>;
   }
 
   hello() {
@@ -23,7 +22,7 @@ class MyComponent {
   }
 }
 
-const instance = new MyComponent({ greeting: "Hello" });
+const instance = ethc.initialize(new MyComponent({ greeting: "Hello" }));
 
 const app = document.getElementById("app");
 

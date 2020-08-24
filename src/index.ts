@@ -9,12 +9,19 @@ export function initialize(component) {
       $originUpdate.call(s, ...arguments);
     });
   }
-  Object.assign(component, { $state, update });
 
-  // element property
-  Object.defineProperty(component, "element", {
-    get: function () {
-      return component.render();
+  // a proxy that handles getting object properties
+  const handler = {
+    get(target, property) {
+      if (property === "update") {
+        return update;
+      } else if (property === "element") {
+        return component.render();
+      } else {
+        return $state[property];
+      }
     }
-  });
+  };
+  const proxyComponent = new Proxy(component, handler);
+  return proxyComponent;
 }
