@@ -25,6 +25,9 @@ export function initialize(component) {
   }
 
 
+  // add update, destroy, and setState to the component
+  Object.assign(component, { update, destroy, setState });
+
   // element property
   Object.defineProperty(component, "element", {
     get: function () {
