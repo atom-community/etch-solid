@@ -1,4 +1,4 @@
-import { createState } from "solid-js";
+import { createState, createRoot, produce } from "solid-js";
 
 // etch.initialize
 export function initialize(component) {
@@ -13,10 +13,8 @@ export function initialize(component) {
   );
 
   // handle updating
-  function update() {
-    setState((s) => {
-      $originUpdate.call(s, ...arguments);
-    });
+  function update(...args) {
+    setState(produce((s) => $originUpdate.call(s, ...args)));
   }
 
   // add update and states properties
