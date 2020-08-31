@@ -1,8 +1,8 @@
 dependencies:
-  babel-preset-solid: 0.18.14_@babel+core@7.11.4
+  babel-preset-solid: 0.19.0
   parcel: 2.0.0-beta.1
-  solid-js: 0.18.14
-  solid-styled-jsx: 0.18.14_ebbbb6e10964964a33f919918c6cd515
+  solid-js: 0.19.1
+  solid-styled-jsx: 0.19.1_solid-js@0.19.1+styled-jsx@3.3.0
   styled-jsx: 3.3.0
 devDependencies:
   '@babel/core': 7.11.4
@@ -439,6 +439,14 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-lY6kdGpWHvjoe2vk4WrAapEuBR69EMxZl+RoGRhrFGNYVK8mOPAW8VfbT/ZgrFbXlDNiiaxQnAtgVCZ6jv30EA==
+  /@babel/plugin-syntax-jsx/7.10.4:
+    dependencies:
+      '@babel/helper-plugin-utils': 7.10.4
+    dev: false
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-KCg9mio9jwiARCB7WAcQ7Y1q+qicILjoK8LP/VkPkEKaf5dkaZZK1EcTe91a3JJlZ3qy6L5s9X52boEYi8DM9g==
   /@babel/plugin-syntax-jsx/7.10.4_@babel+core@7.11.4:
     dependencies:
       '@babel/core': 7.11.4
@@ -2214,15 +2222,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==
-  /babel-plugin-jsx-dom-expressions/0.19.10_@babel+core@7.11.4:
+  /babel-plugin-jsx-dom-expressions/0.20.0:
     dependencies:
       '@babel/helper-module-imports': 7.10.4
-      '@babel/plugin-syntax-jsx': 7.10.4_@babel+core@7.11.4
+      '@babel/plugin-syntax-jsx': 7.10.4
     dev: false
-    peerDependencies:
-      '@babel/core': '*'
     resolution:
-      integrity: sha512-/gpqeOSCPEt+hOREHlZIXhn8UjfXg5MZM56dWpGzuGB3+XsiWZ07Geh2yPrho0uwksMJP/OOO5Ipk+Oei8eTSQ==
+      integrity: sha512-htxK+3ivckBZi5FjEVpLRbfwJdfZfVL7beAnwCef6sKeskVHMAINLKZy2masZei3HIh5sNCZm0A6u8MSXzkTgg==
   /babel-plugin-syntax-jsx/6.18.0:
     dev: false
     resolution:
@@ -2231,14 +2237,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-dPgJoT57XC0PqSnLgl2FwNvxFrWlspatX2dkk7yjKQj5HHGw071vAcOf+hqW8ClqcBDMvEbm6mevn5yHAD8mlQ==
-  /babel-preset-solid/0.18.14_@babel+core@7.11.4:
+  /babel-preset-solid/0.19.0:
     dependencies:
-      babel-plugin-jsx-dom-expressions: 0.19.10_@babel+core@7.11.4
+      babel-plugin-jsx-dom-expressions: 0.20.0
+      babel-plugin-transform-rename-import: 2.3.0
     dev: false
-    peerDependencies:
-      '@babel/core': '*'
     resolution:
-      integrity: sha512-plDadLGxyg0XiYNJO0bk2UuJP4u4hH6AWEGfELo7Ug3oQs2HvlTW12h77nDQaVr+45r3uhHuuJojZMDXxHaGPg==
+      integrity: sha512-LGjGT2G1qdng43wINgulK774xTnDELVAR8G8HAs6LiQ4bM2TVx0Lp+0w34VDszKbqER7eiTi3MVd3ANVxvzDNg==
   /balanced-match/1.0.0:
     dev: false
     resolution:
@@ -5909,21 +5914,21 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-FtyOnWN/wCHTVXOMwvSv26d+ko5vWlIDD6zoUJ7LW8vh+ZBC8QdljveRP+crNrtBwioEUWy/4dMtbBjA4ioNlg==
-  /solid-js/0.18.14:
+  /solid-js/0.19.1:
     dev: false
     resolution:
-      integrity: sha512-XAmsf4WP16aQ0RJMNk50Xi0OD0QQK/OAA0aFnT2/7OsLzdjJVohrTf58fE7B7Zhk0CiEdCtkktX7MaxOvfY3RQ==
-  /solid-styled-jsx/0.18.14_ebbbb6e10964964a33f919918c6cd515:
+      integrity: sha512-ks5UIJtYxGr14991ZxdKP3KeJ95xOL8DmAzBI9S3pWznC+tuLiDKXH8XSzBP8lQBWKtMbYDC7wWZ3XUQdRNEKA==
+  /solid-styled-jsx/0.19.1_solid-js@0.19.1+styled-jsx@3.3.0:
     dependencies:
       babel-plugin-transform-rename-import: 2.3.0
-      solid-js: 0.18.14
+      solid-js: 0.19.1
       styled-jsx: 3.3.0
     dev: false
     peerDependencies:
       solid-js: ^0.18.0
       styled-jsx: ^3.2.5
     resolution:
-      integrity: sha512-fQAXH+9AzlVNaU5SjzQsWuKu7ACcJtxkaYLOOezGoWq97fIxr2y8Gixcj5PMCpl4ndBg+7OSryf2of0tva8Zww==
+      integrity: sha512-StnLSd6lA9ct0DXK20O8vsX8xmf/rihPyDbEAXyM45UHnJttwov2dDTwfxX7tn0a031p+JLQuNsnl7eCRraSUQ==
   /source-map-resolve/0.5.3:
     dependencies:
       atob: 2.1.2
@@ -6622,8 +6627,8 @@ packages:
       integrity: sha512-yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==
 specifiers:
   '@babel/core': 7.11.4
-  babel-preset-solid: 0.18.14
+  babel-preset-solid: 0.19.0
   parcel: ^2.0.0-beta.1
-  solid-js: 0.18.14
-  solid-styled-jsx: 0.18.14
+  solid-js: 0.19.1
+  solid-styled-jsx: 0.19.1
   styled-jsx: 3.3.0
