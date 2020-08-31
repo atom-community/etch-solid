@@ -1,27 +1,36 @@
-import { createState } from "solid-js";
+import { createState, createRoot, produce } from "solid-js";
 
 // etch.initialize
 export function initialize(component) {
 
-  const $originUpdate = component.update;
+  const $originUpdate = component.update,
+    $originDestroy = component.destroy;
 
   // handle the changes in the states
-  const [$state, setState] = createState(component);
+  let dispose;
+  const d = Object.getOwnPropertyDescriptors(component.__proto__);
+  const [$state, setState] = createState(
+    Object.assign(Object.create(Object.prototype, d), component)
+  );
 
   // handle updating
-  function update() {
-    setState((s) => {
-      $originUpdate.call(s, ...arguments);
-    });
+  function update(...args) {
+    setState(produce((s) => $originUpdate.call(s, ...args)));
   }
 
-  // add update and states properties
-  Object.assign(component, { $state, update });
+  // handle destroying
+  function destroy() {
+    $originDestroy && $originDestroy.call($state);
+    dispose();
+  }
+
+
+  // add update, destroy, and setState to the component
+  Object.assign(component, { update, destroy, setState });
 
   // element property
-  Object.defineProperty(component, "element", {
-    get: function () {
-      return component.render();
-    }
+  createRoot((disposer) => {
+    dispose = disposer;
+    component.element = component.render.call($state);
   });
 }

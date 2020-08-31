@@ -7,8 +7,7 @@ class MyComponent {
   }
 
   render() {
-    //  transpile all getter to read from $state
-    return <div>{this.$state.props.greeting} World!</div>;
+    return <div>{this.props.greeting} World!</div>;
   }
 
   hello() {
