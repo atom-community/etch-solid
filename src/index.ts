@@ -6,7 +6,11 @@ export function initialize(component) {
   const $originUpdate = component.update;
 
   // handle the changes in the states
-  const [$state, setState] = createState(component);
+  let dispose;
+  const d = Object.getOwnPropertyDescriptors(component.__proto__);
+  const [$state, setState] = createState(
+    Object.assign(Object.create(Object.prototype, d), component)
+  );
 
   // handle updating
   function update() {
