@@ -3,7 +3,8 @@ import { createState, createRoot, produce } from "solid-js";
 // etch.initialize
 export function initialize(component) {
 
-  const $originUpdate = component.update;
+  const $originUpdate = component.update,
+    $originDestroy = component.destroy;
 
   // handle the changes in the states
   let dispose;
@@ -17,8 +18,12 @@ export function initialize(component) {
     setState(produce((s) => $originUpdate.call(s, ...args)));
   }
 
-  // add update and states properties
-  Object.assign(component, { $state, update });
+  // handle destroying
+  function destroy() {
+    $originDestroy && $originDestroy.call($state);
+    dispose();
+  }
+
 
   // element property
   Object.defineProperty(component, "element", {
