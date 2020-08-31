@@ -29,9 +29,8 @@ export function initialize(component) {
   Object.assign(component, { update, destroy, setState });
 
   // element property
-  Object.defineProperty(component, "element", {
-    get: function () {
-      return component.render();
-    }
+  createRoot((disposer) => {
+    dispose = disposer;
+    component.element = component.render.call($state);
   });
 }
