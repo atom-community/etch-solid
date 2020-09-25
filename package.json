@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "babel-preset-solid": "0.19.0",
-    "solid-js": "0.19.1",
+    "solid-js": "0.19.2",
     "solid-styled-jsx": "0.19.1",
     "styled-jsx": "3.3.0"
   },
