@@ -8,8 +8,6 @@
       }
     ]
   ],
-  "plugins": [
-    "solid-styled-jsx/babel"
-  ],
+  "plugins": ["solid-styled-jsx/babel"],
   "parserOpts": {}
 }

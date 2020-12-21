@@ -1,9 +1,5 @@
 {
-  "presets": [
-    "babel-preset-solid"
-  ],
-  "plugins": [
-    "solid-styled-jsx/babel"
-  ],
+  "presets": ["babel-preset-solid"],
+  "plugins": ["solid-styled-jsx/babel"],
   "parserOpts": {}
 }

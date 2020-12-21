@@ -1,35 +1,35 @@
-import * as etch from '../../dist/index';
+import * as etch from "../../dist/index"
 
 class MyComponent {
   constructor(props, children) {
-    this.props = props;
-    etch.initialize(this);
+    this.props = props
+    etch.initialize(this)
   }
 
   render() {
-    return <div>{this.props.greeting} World!</div>;
+    return <div>{this.props.greeting} World!</div>
   }
 
   hello() {
-    console.log("hello");
+    console.log("hello")
   }
 
   update(newProps) {
-    this.hello();
+    this.hello()
     if (this.props.greeting !== newProps.greeting) {
-      this.props.greeting = newProps.greeting;
+      this.props.greeting = newProps.greeting
     }
   }
 }
 
-const instance = new MyComponent({ greeting: "Hello" });
+const instance = new MyComponent({ greeting: "Hello" })
 
-const app = document.getElementById("app");
+const app = document.getElementById("app")
 
 // using element
-app.appendChild(instance.element);
+app.appendChild(instance.element)
 
 setTimeout(() => {
-  instance.update({ greeting: "Hi" });
-  console.log("updated");
-}, 1000);
+  instance.update({ greeting: "Hi" })
+  console.log("updated")
+}, 1000)
