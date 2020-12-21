@@ -1,4 +1,4 @@
-/** @jsx dom */
+
 
 const {assert} = require('chai')
 const Random = require('random-seed')

@@ -1,4 +1,4 @@
-/** @jsx etch.dom */
+
 
 const etch = require('../../dist/index')
 
