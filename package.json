@@ -34,10 +34,10 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "babel-preset-solid": "0.23.4",
-    "solid-js": "0.23.4",
-    "solid-styled-jsx": "0.23.4",
-    "styled-jsx": "3.3.2"
+    "babel-preset-solid": "1.8.0",
+    "solid-js": "1.8.1",
+    "solid-styled-jsx": "0.27.1",
+    "styled-jsx": "5.1.2"
   },
   "devDependencies": {
     "@types/atom": "1.40.5",
