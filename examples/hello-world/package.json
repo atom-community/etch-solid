@@ -15,7 +15,7 @@
     "styled-jsx": "3.3.0"
   },
   "devDependencies": {
-    "@babel/core": "7.11.4"
+    "@babel/core": "7.23.2"
   },
   "keywords": [],
   "browserslist": {
